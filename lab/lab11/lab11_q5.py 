@@ -1,0 +1,20 @@
+def is complete(root):
+q = ArrayQueue():
+q.enqueue(root)
+depth = 0
+while not q.is_empty():
+#the queue contains all nodes in the current depth level
+  if len(q) != 2**(depth):
+    return False
+
+  for i in range(len(q)):
+    node = q.dequeue()
+
+      if nofe.left is not NONE:
+        q.enqueue(node.left)
+      if node.right:
+        q.enqueue(node.right)
+
+      depth+=1
+
+      return True 

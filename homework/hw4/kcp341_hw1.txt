@@ -1,0 +1,18 @@
+Runtime: 
+
+def sum_lst1(lst):
+	if (len(lst) == 1):
+		return lst[0]
+	else:
+		rest = sum_lst1(lst[1:])
+		sum = lst[0] + rest
+		return sum
+Runtime: n
+
+def sum_lst2(lst, low, high):
+	if (low == high):
+		return lst[low]
+	else:
+		rest = sum_lst2(lst, low + 1, high)
+		sum = lst[low] + rest
+		return sum
